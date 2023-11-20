@@ -1,4 +1,5 @@
-import { NavLink } from "react-router-dom";
+import React from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 
 import { Button } from "antd";
 import { FiPaperclip } from "react-icons/fi";
@@ -11,8 +12,11 @@ import {
   MdTask,
   MdViewInAr,
 } from "react-icons/md";
+import { useSelector } from "react-redux";
 import { userLocalStorage } from "../../utils/config";
 function Menu() {
+  const { projectDetail } = useSelector((state) => state.projectSlice);
+  const navigate = useNavigate();
   const user = userLocalStorage.get();
   return (
     <div className="menu">
@@ -23,10 +27,17 @@ function Menu() {
         />
         <div className="menu__user-info">
           <div className="framework">{user.name}</div>
-          <div className="project">Jira</div>
+          <div className="project">Jira Clone 2.0</div>
         </div>
       </div>
-      <Button type="link" className="menu__item">
+      <Button
+        type="link"
+        onClick={() => {
+          if (projectDetail?.id) navigate(`/board/${projectDetail?.id}`);
+          else navigate("/projects");
+        }}
+        className="menu__item"
+      >
         <MdDashboard className="menu__item-icon" />
         <span>Kanban Board</span>
       </Button>
@@ -37,10 +48,6 @@ function Menu() {
       <NavLink to="/projects" className="menu__item">
         <MdTask className="menu__item-icon" />
         <span>Project Management</span>
-      </NavLink>
-      <NavLink to="/users" className="menu__item">
-        <MdCreate className="menu__item-icon" />
-        <span>Users</span>
       </NavLink>
       <hr></hr>
       <div className="menu__item">
