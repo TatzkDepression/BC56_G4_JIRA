@@ -20,7 +20,7 @@
 
 ## Installed Packages
 
-- UI: antd, tailwindcss
+- UI: antd
 - Routing: react-router-dom
 - Form: formik, yup
-- Others: react-beautiful-dnd (Drag and Drop), @tinymce/tinymce-react (Editor), html-react-parser (Parse HTML)
+- Others: react-beautiful-dnd (Drag and Drop), @tinymce/tinymce-react (Editor), html-react-parser (Parse HTML),sass,axios
