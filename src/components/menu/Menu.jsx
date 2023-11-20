@@ -27,7 +27,7 @@ function Menu() {
         />
         <div className="menu__user-info">
           <div className="framework">{user.name}</div>
-          <div className="project">Jira Clone 2.0</div>
+          <div className="project">Jira</div>
         </div>
       </div>
       <Button
@@ -48,6 +48,10 @@ function Menu() {
       <NavLink to="/projects" className="menu__item">
         <MdTask className="menu__item-icon" />
         <span>Project Management</span>
+      </NavLink>
+      <NavLink to="/Users" className="menu__item">
+        <MdCreate className="menu__item-icon" />
+        <span>Users</span>
       </NavLink>
       <hr></hr>
       <div className="menu__item">
