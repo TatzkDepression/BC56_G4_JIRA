@@ -1,0 +1,11 @@
+.user {
+    overflow: hidden;
+    height: 100vh;
+    &__left{
+        @include flex(center,center);
+        padding: 2rem;
+        @include tablet{
+            display: none;
+        }
+    }
+}
