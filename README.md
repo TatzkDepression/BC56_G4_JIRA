@@ -20,8 +20,8 @@
 
 ### [Binh Thanh](https://github.com)
 
--User Page
--Edit User Page
+- User Page
+- Edit User Page
 
 ## Installed Packages
 
