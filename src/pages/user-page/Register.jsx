@@ -27,8 +27,8 @@ const Register = () => {
           className="mb-3"
           label="Email"
           rules={[
-            { type: "email", message: "Không phải email (►__◄)" },
-            { required: true, message: "Email trống {{{(>_<)}}}" },
+            { type: "email", message: "Không phải email" },
+            { required: true, message: "Email trống" },
           ]}
         >
           <Input />
@@ -38,7 +38,7 @@ const Register = () => {
           label="Mật khẩu"
           name="passWord"
           className="mb-3"
-          rules={[{ required: true, message: "Chưa nhập mật khẩu o(TヘTo)" }]}
+          rules={[{ required: true, message: "Chưa nhập mật khẩu" }]}
         >
           <Input.Password />
         </Form.Item>
@@ -47,7 +47,7 @@ const Register = () => {
           name="name"
           className="mb-3"
           label="Họ tên"
-          rules={[{ required: true, message: "Họ tên trống {{{(>_<)}}}" }]}
+          rules={[{ required: true, message: "Họ tên trống" }]}
         >
           <Input />
         </Form.Item>
@@ -57,7 +57,7 @@ const Register = () => {
           className="mb-3"
           label="Số điện thoại"
           rules={[
-            { required: true, message: "Số điện thoại trống {{{(>_<)}}}" },
+            { required: true, message: "Số điện thoại trống" },
             { max: 10, message: "Tối đa 10 chữ số" },
             { min: 10, message: "Tối thiểu 10 chữ số" },
           ]}
