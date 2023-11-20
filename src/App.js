@@ -9,6 +9,7 @@ import Login from "./pages/user-page/Login";
 import Register from "./pages/user-page/Register";
 import CreateProject from "./pages/create-project/CreateProject";
 import createUsers from "./pages/create-users/createUsers";
+import ErrorPage from "./pages/error-page/ErrorPage";
 function App() {
   return (
     <>
@@ -53,6 +54,7 @@ function App() {
             }
           />
         </Route>
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </>
   );
