@@ -4,19 +4,24 @@
 
 ### [Nhan Thanh](https://github.com/TatzkDepression)
 
-- Log in page
-- Sign up page
+- Log in Page
+- Sign up Page
 - Loading Page
 - Error Page
 
 ### [Loc Tran](https://github.com/LocoTran)
 
-- Manage project page
-- New project page
-- Edit project page
-- Manage task page
-- Create task modal
-- Edit task modal
+- Manage Project Page
+- New Project Page
+- Edit Project Page
+- Manage Task Page
+- Create Task Modal
+- Edit Task Modal
+
+### [Binh Thanh](https://github.com)
+
+-User Page
+-Edit User Page
 
 ## Installed Packages
 
