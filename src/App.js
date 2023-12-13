@@ -12,6 +12,7 @@ import ProjectManagement from "./pages/project-management/ProjectManagement";
 import Login from "./pages/user-page/Login";
 import Register from "./pages/user-page/Register";
 import createUsers from "./pages/createUsers/createUsers";
+import UserManagementPage from "./pages/User-Management-Page/UserManagement";
 function App() {
   return (
     <>
@@ -57,7 +58,7 @@ function App() {
             index
             path="/users"
             element={
-              <Dashboard Component={createUsers} title={"Users Management"} />
+              <Dashboard Component={UserManagementPage} title={"Users Management"} />
             }
           />
         </Route>
