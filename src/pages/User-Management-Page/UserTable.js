@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 
 const UserTable = ({ userList }) => {
-    const { user } = useSelector((state) => state.userSlice);
+    // const { user } = useSelector((state) => state.userSlice);
     const dispatch = useDispatch();
     const [filteredInfo, setFilteredInfo] = useState({});
     const [sortedInfo, setSortedInfo] = useState({});
@@ -20,10 +20,9 @@ const UserTable = ({ userList }) => {
         setFilteredInfo({});
         setSortedInfo({});
     };
-    const data = userList.map((item) => {
-        console.log("🚀  data  item:", item)
-        return { text: item.name, value: item.name };
-    });
+    // const data = userList.map((item) => {
+    //     return { text: item.name, value: item.name };
+    // });
 
     let headColumns = [
         {
@@ -39,12 +38,12 @@ const UserTable = ({ userList }) => {
             title: "Project name",
             dataIndex: "name",
             key: "name",
-            filterSearch: true,
-            filteredValue: filteredInfo.name || null,
+            // filterSearch: true,
+            // filteredValue: filteredInfo.name || null,
             // filters: userList.map((item) => {
             //     return { text: item.name, value: item.name };
             // }),
-            onFilter: (value, record) => record.name.startsWith(value),
+            // onFilter: (value, record) => record.name.startsWith(value),
             render: (text) => {
                 return <span style={{ color: "blue" }}>{text}</span>;
             },
