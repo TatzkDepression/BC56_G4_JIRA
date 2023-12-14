@@ -7,24 +7,24 @@ import {
     IdcardOutlined,
 } from "@ant-design/icons";
 import USER_SERVICE from "../../services/userService";
-import toastify from "../../components/toastify/Toastify";
 import Label from "../../components/form/Label";
+import { openNotification } from "../../components/notification/notification";
 
 const UserEdit = ({ user, onSuccess }) => {
     const onFinish = (value) => {
         let userEdit = { ...value, id: user.userId };
         USER_SERVICE.editUser(userEdit)
             .then((res) => {
-                toastify("success", "Update user successfully!");
+                openNotification("success", "Update user successfully!");
                 onSuccess();
             })
             .catch((err) => {
-                toastify("error", err.response.data.message);
+                openNotification("error", err.response.data.message);
             });
     };
 
     const labelItem = (labelText) => (
-        <Label className="text-lg font-medium">{labelText}</Label>
+        <Label className="font-medium">{labelText}</Label>
     );
 
     return (
@@ -142,7 +142,6 @@ const UserEdit = ({ user, onSuccess }) => {
                 <Button
                     type="primary"
                     htmlType="submit"
-                    className="register-form-button mt-3 text-lg font-semibold"
                 >
                     Update User
                 </Button>

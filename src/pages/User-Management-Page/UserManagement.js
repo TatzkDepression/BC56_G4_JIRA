@@ -7,7 +7,6 @@ import UserTable from "./UserTable";
 
 export default function UserManagementPage() {
     const [userList, setUserList] = useState([]);
-    console.log("🚀  UserManagementPage  userList:", userList)
 
     useEffect(() => {
         let fetchUserList = () => {
@@ -31,8 +30,6 @@ export default function UserManagementPage() {
 
     return (
         <div className="container mx-auto pt-16">
-            <h1 className="text-center text-3xl">User Management</h1>
-
             <UserTable userList={userList} />
         </div>
     );
