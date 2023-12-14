@@ -4,6 +4,7 @@ import App from './App';
 
 //sass
 import './sass/index.scss';
+import "./index.css";
 
 //Redux
 import { Provider } from 'react-redux';

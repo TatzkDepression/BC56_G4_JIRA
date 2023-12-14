@@ -35,7 +35,7 @@ export default function UserAction({
 
     return (
         <div className="space-x-2">
-            <button onClick={showModal}>
+            <button onClick={showModal} className="EditFilled">
                 <EditFilled style={{ color: "blue", fontSize: 20, marginRight: 10 }} />
             </button>
             <Modal
