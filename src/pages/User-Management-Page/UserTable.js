@@ -20,9 +20,11 @@ const UserTable = ({ userList }) => {
         setFilteredInfo({});
         setSortedInfo({});
     };
-    const data = [user].map((item) => {
+    const data = userList.map((item) => {
+        console.log("🚀  data  item:", item)
         return { text: item.name, value: item.name };
     });
+
     let headColumns = [
         {
             title: "User Id",
@@ -39,9 +41,9 @@ const UserTable = ({ userList }) => {
             key: "name",
             filterSearch: true,
             filteredValue: filteredInfo.name || null,
-            filters: [user].map((item) => {
-                return { text: item.name, value: item.name };
-            }),
+            // filters: userList.map((item) => {
+            //     return { text: item.name, value: item.name };
+            // }),
             onFilter: (value, record) => record.name.startsWith(value),
             render: (text) => {
                 return <span style={{ color: "blue" }}>{text}</span>;
