@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Button, Space, Table } from "antd";
 import { useDispatch } from "react-redux";
-import { getAllProjectThunk } from "../../redux/thunk/projectThunk";
 import { useSelector } from "react-redux";
 
 const UserTable = ({ userList }) => {
@@ -24,7 +23,6 @@ const UserTable = ({ userList }) => {
     const data = [user].map((item) => {
         return { text: item.name, value: item.name };
     });
-
     let headColumns = [
         {
             title: "User Id",

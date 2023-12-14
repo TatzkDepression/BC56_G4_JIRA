@@ -19,7 +19,7 @@ export default function UserManagementPage() {
                         };
                     });
                     setUserList(data);
-                    console.log("🚀  .then  setUserList:", setUserList)
+                    console.log("🚀  .then  data:", data)
                 })
                 .catch((err) => {
                     console.log(err);
