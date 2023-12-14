@@ -13,10 +13,10 @@ const AXIOS_INSTANCE_GENERATOR = (BASE_URL, accessToken = false) => {
         baseURL: BASE_URL,
         headers: {
             TokenCybersoft: TOKEN_CYBERSOFT,
-            Authorization: "Bearer " + LOCAL_SERVICE.user.get()?.accessToken,
+            Authorization: "Bearer " + localStorage.getItem("TOKEN"),
         },
     };
-
+    // LOCAL_SERVICE.user.get()?.accessToken
     return axios.create(config);
 };
 
