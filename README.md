@@ -20,6 +20,7 @@
 
 ### [Binh Thanh](https://github.com/binhkemonboy)
 
+- Manage Users Page
 - User Page
 - Edit User Page
 
